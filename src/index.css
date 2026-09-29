@@ -1,0 +1,230 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  code, pre, .math-font {
+    font-family: 'Fira Code', monospace;
+  }
+}
+
+/* Custom scratchpad grid and paper textures */
+.bg-math-grid {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+.bg-math-grid-light {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+}
+
+.bg-math-dots {
+  background-size: 20px 20px;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+}
+
+.bg-ruled-paper {
+  background-size: 100% 28px;
+  background-image: linear-gradient(to bottom, transparent 27px, rgba(99, 102, 241, 0.15) 28px);
+}
+
+/* KaTeX custom sizing adjustments */
+.katex {
+  font-size: 1.1em;
+  text-rendering: auto;
+}
+
+.katex-display {
+  margin: 0.75em 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25rem 0;
+}
+
+/* ========================================================
+   HIGH-CONTRAST LIGHT MODE (Daytime Study Theme Overrides)
+   ======================================================== */
+.light-mode {
+  color-scheme: light;
+}
+
+/* Background surfaces */
+.light-mode body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+.light-mode .bg-slate-950,
+.light-mode .bg-slate-950\/80,
+.light-mode .bg-slate-950\/50,
+.light-mode .bg-slate-950\/60,
+.light-mode .bg-slate-950\/40,
+.light-mode .bg-slate-950\/70 {
+  background-color: #ffffff !important;
+}
+
+.light-mode .bg-slate-900,
+.light-mode .bg-slate-900\/90,
+.light-mode .bg-slate-900\/80,
+.light-mode .bg-slate-900\/60,
+.light-mode .bg-slate-900\/40,
+.light-mode .bg-slate-900\/70,
+.light-mode .bg-slate-900\/95 {
+  background-color: #f1f5f9 !important;
+}
+
+.light-mode .bg-slate-800,
+.light-mode .bg-slate-800\/80,
+.light-mode .bg-slate-800\/70,
+.light-mode .bg-slate-800\/60,
+.light-mode .bg-slate-800\/90 {
+  background-color: #e2e8f0 !important;
+}
+
+/* Borders */
+.light-mode .border-slate-800,
+.light-mode .border-slate-800\/80,
+.light-mode .border-slate-800\/60,
+.light-mode .border-slate-800\/40,
+.light-mode .border-slate-700,
+.light-mode .border-slate-700\/80,
+.light-mode .border-slate-700\/60,
+.light-mode .border-slate-700\/50,
+.light-mode .border-slate-900 {
+  border-color: #cbd5e1 !important;
+}
+
+/* Typography high-contrast */
+.light-mode .text-white,
+.light-mode .text-slate-100 {
+  color: #0f172a !important;
+}
+
+.light-mode .text-slate-200,
+.light-mode .text-slate-300 {
+  color: #1e293b !important;
+}
+
+.light-mode .text-slate-400 {
+  color: #475569 !important;
+}
+
+.light-mode .text-slate-500 {
+  color: #64748b !important;
+}
+
+/* KaTeX formula contrast in light mode */
+.light-mode .katex {
+  color: #0f172a !important;
+}
+
+/* Accent boxes in light mode */
+.light-mode .bg-indigo-950\/30,
+.light-mode .bg-indigo-950\/20,
+.light-mode .bg-indigo-950\/40,
+.light-mode .bg-indigo-950\/60 {
+  background-color: #e0e7ff !important;
+  border-color: #a5b4fc !important;
+  color: #312e81 !important;
+}
+
+.light-mode .text-indigo-200,
+.light-mode .text-indigo-300 {
+  color: #3730a3 !important;
+}
+
+.light-mode .text-emerald-200,
+.light-mode .text-emerald-300 {
+  color: #065f46 !important;
+}
+
+.light-mode .bg-emerald-950\/40,
+.light-mode .bg-emerald-950\/30,
+.light-mode .bg-emerald-950\/60 {
+  background-color: #d1fae5 !important;
+  border-color: #6ee7b7 !important;
+  color: #064e3b !important;
+}
+
+.light-mode .bg-amber-950\/30,
+.light-mode .bg-amber-950\/40 {
+  background-color: #fef3c7 !important;
+  border-color: #fcd34d !important;
+  color: #78350f !important;
+}
+
+.light-mode .text-amber-200,
+.light-mode .text-amber-300 {
+  color: #92400e !important;
+}
+
+.light-mode .bg-rose-950\/20,
+.light-mode .bg-rose-950\/30,
+.light-mode .bg-rose-950\/40 {
+  background-color: #ffe4e6 !important;
+  border-color: #fca5a5 !important;
+  color: #881337 !important;
+}
+
+.light-mode .text-rose-200,
+.light-mode .text-rose-300 {
+  color: #9f1239 !important;
+}
+
+/* Function Plot SVG adjustments in light mode */
+.light-mode svg.function-plot {
+  background: #ffffff !important;
+}
+
+.light-mode svg.function-plot .origin {
+  stroke: #0f172a !important;
+}
+
+.light-mode svg.function-plot .axis text {
+  fill: #334155 !important;
+}
+
+/* Light paper grid textures */
+.light-mode .bg-math-grid {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 1px, transparent 1px) !important;
+}
+
+.light-mode .bg-math-dots {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 1px) !important;
+}
+
+.light-mode .bg-ruled-paper {
+  background-image: linear-gradient(to bottom, transparent 27px, rgba(99, 102, 241, 0.25) 28px) !important;
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+.light-mode ::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 9999px;
+}
+.light-mode ::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}

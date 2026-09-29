@@ -1,0 +1,6 @@
+{
+  "name": "JUPEB Math Mastery - Interactive Step-by-Step Tutor & SRS",
+  "description": "Production-grade JUPEB & A-Level Mathematics learning platform featuring progressive step-by-step reveals, interactive scratchpad, AI hints, topic mastery analytics, spaced repetition, and past question bank.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
